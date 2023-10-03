@@ -1,0 +1,26 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: your-email-id
+    password: your-gmail-password after setting in on google Account
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  application:
+    name: BIRTHDAY-NOTIFICATION
+  datasource:
+      url: jdbc:mysql://${DB_HOST:localhost}:3306/birthday?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Kolkata
+      username: root 
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+      
+      
+#     
